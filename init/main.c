@@ -500,6 +500,7 @@ asmlinkage void __init start_kernel(void)
 
 	printk(KERN_NOTICE "Kernel command line: %s\n", boot_command_line);
 	parse_early_param();
+	printk(KERN_WARNING "awsome: static_command_line: %s\n", static_command_line);
 	parse_args("Booting kernel", static_command_line, __start___param,
 		   __stop___param - __start___param,
 		   &unknown_bootoption);
